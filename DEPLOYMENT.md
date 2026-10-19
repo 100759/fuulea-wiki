@@ -250,10 +250,14 @@ jobs:
 | --- | --- | --- | --- |
 | CNAME | `fuulea` | `fuulea-wiki.pages.dev` | 已代理（橙色云） |
 
-因为 `fuheng.vip` 的 NS 已指向 Cloudflare，通过 **Dashboard** 添加自定义域名时 CNAME 通常由 Cloudflare 自动写入。
+因为 `fuheng.vip` 的 NS 已指向 Cloudflare，把域名加到 Pages 项目后，Cloudflare 会自动写入（或自动扁平化为代理记录）该 CNAME。
 
-> ⚠️ **本次实际情况**：通过 **API** 添加域名后，Cloudflare **没有**自动创建 CNAME（域名状态 pending，报 `CNAME record not set`），且当前 wrangler OAuth token 只有 `zone (read)` 权限无法代建 DNS 记录。
-> **解决**：在 Dashboard 手动添加一次（见 5.3），约 1-2 分钟生效。
+> ✅ **最终状态（2026-10-19 复核）**：`fuulea.fuheng.vip` 在 Pages 项目中状态为 **active**，`verification_data.status = active`；
+> `dig +short fuulea.fuheng.vip` 返回 Cloudflare 代理 IP `172.67.217.214` / `104.21.86.103`；
+> `https://fuulea.fuheng.vip/` 返回 200，标题、章节页、截图资源均正常。
+>
+> 📌 **过程备注**：刚通过 API 添加时是 `pending` 并报 `CNAME record not set`，此后无需人工干预即自行转为 active（记录已由 Cloudflare 侧补齐）。
+> 若再次遇到长时间 pending，再走 5.3 的手动兜底。
 
 **API 添加域名：**
 
@@ -264,7 +268,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/47843e1d05e3cb3056fe
   -d '{ "name": "fuulea.fuheng.vip" }'
 ```
 
-### 5.3 手动添加 DNS（本次需要）
+### 5.3 手动添加 DNS（备选兜底）
 
 Dashboard → `fuheng.vip` → DNS → 添加记录（直达链接：<https://dash.cloudflare.com/cbd62ce95577789e84efa713160d67f2/fuheng.vip/dns>）：
 
@@ -348,13 +352,17 @@ npm run docs:build   # 失败则先修复再推送，避免污染部署记录
 | 1 | VitePress 项目 `fuulea-wiki` 本地构建通过 | ✅ |
 | 2 | 教师端操作手册全文 + 99 张截图 | ✅ |
 | 3 | GitHub 仓库 `100759/fuulea-wiki`（public，main） | ✅ <https://github.com/100759/fuulea-wiki> |
-| 4 | 代码推送（118 个文件，2 个提交） | ✅ |
+| 4 | 代码推送（134 个跟踪文件） | ✅ |
 | 5 | Cloudflare Pages 项目 `fuulea-wiki` + GitHub 关联 | ✅ 推送自动触发构建 |
 | 6 | 生产域名 `fuulea-wiki.pages.dev` 上线 | ✅ 已验证 200 |
-| 7 | 自定义域名 `fuulea.fuheng.vip` | ⚠️ 待补 CNAME（见 5.2 备注） |
-| 8 | 推送 → 自动部署全链路验证 | ✅ 首次部署 deploy success |
+| 7 | 自定义域名 `fuulea.fuheng.vip` | ✅ 已 active，HTTPS 200 |
+| 8 | 推送 → 自动部署全链路验证 | ✅ 多轮 deploy success |
+| 9 | 站内去除所有 GitHub 外链（导航图标 /「编辑此页」/ 首页「在 GitHub 上查看」） | ✅ 线上已验证无残留 |
 
-> **关于第 7 项**：通过 Pages API 添加自定义域名后，Cloudflare 未自动创建 CNAME（域名状态 pending，报 "CNAME record not set"）。
-> 当前 wrangler OAuth token 只有 `zone (read)` 权限，无法代建 DNS 记录，需在 dashboard 手动添加一次：
-> `fuheng.vip` → DNS → 添加记录：类型 **CNAME**、名称 **fuulea**、目标 **fuulea-wiki.pages.dev**、代理状态**开启**。
-> 添加后约 1-2 分钟域名生效，SSL 证书由 Cloudflare 自动签发。
+> **关于第 7 项**：域名经 Pages API 添加后曾短暂处于 `pending`（报 "CNAME record not set"），随后由 Cloudflare 侧自行补齐记录转为 `active`，
+> 无需人工干预。复核结果：`dig +short fuulea.fuheng.vip` → `172.67.217.214` / `104.21.86.103`（代理开启）；
+> `https://fuulea.fuheng.vip/`、`/teacher/task-publish`、`/images/manual/*.png` 全部 200。若日后重建项目遇到同类 pending，按 5.3 手动兜底即可。
+>
+> **关于第 9 项**：站点面向学校老师，仓库入口属误操作风险点，故已全部移除——`themeConfig.editLink` 置空、删除导航栏 GitHub 社交图标、
+> 首页 hero 区改为仅保留「教师端操作手册」与「FAQ常见问题」两个按钮。仓库内的 `README.md` / 本文件仍保留 GitHub 地址，
+> 但它们不参与站点构建（不在 `docs/` 下），仅作开发侧文档。
