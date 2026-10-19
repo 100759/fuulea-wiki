@@ -12,9 +12,6 @@ hero:
     - theme: alt
       text: FAQ常见问题
       link: /faq/
-    - theme: alt
-      text: 在 GitHub 上查看
-      link: https://github.com/100759/fuulea-wiki
 
 features:
   - icon: 📋

@@ -97,14 +97,7 @@ export default defineConfig({
       }
     },
 
-    editLink: {
-      pattern: 'https://github.com/100759/fuulea-wiki/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页'
-    },
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/100759/fuulea-wiki' }
-    ],
+    editLink: undefined,
 
     footer: {
       message: '内容维护：辅立码课-华东POD：付恒',
