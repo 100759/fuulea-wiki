@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: '辅立码课知识库',
-  description: '辅立码课（智慧教学云）产品使用手册与 FAQ 知识库 —— 任务发布、教学场景、考试系统、学情诊断全流程指南',
+  title: '辅立码课WiKi',
+  description: '辅立码课使用手册与 FAQ 知识库 —— 教师端、学生端操作手册与常见问题',
   lang: 'zh-CN',
   base: '/',
   cleanUrls: true,
@@ -26,26 +26,12 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      {
-        text: '使用手册',
-        items: [
-          { text: '教师端操作手册', link: '/teacher/' },
-          { text: '学生端使用手册', link: '/student/' }
-        ]
-      },
-      { text: 'FAQ', link: '/faq/' },
-      { text: '后台管理', link: '/admin/' },
-      { text: '关于', link: '/about' }
+      { text: '教师端操作手册', link: '/teacher/' },
+      { text: '学生端操作手册', link: '/student/' },
+      { text: 'FAQ常见问题', link: '/faq/' }
     ],
 
     sidebar: [
-      {
-        text: '产品介绍',
-        collapsed: false,
-        items: [
-          { text: '辅立码课是什么', link: '/product/intro' }
-        ]
-      },
       {
         text: '教师端操作手册',
         collapsed: false,
@@ -57,31 +43,17 @@ export default defineConfig({
         ]
       },
       {
-        text: '学生端',
-        collapsed: true,
+        text: '学生端操作手册',
+        collapsed: false,
         items: [
           { text: '使用手册（整理中）', link: '/student/' }
         ]
       },
       {
-        text: 'FAQ 常见问题',
-        collapsed: true,
+        text: 'FAQ常见问题',
+        collapsed: false,
         items: [
           { text: '常见问题（整理中）', link: '/faq/' }
-        ]
-      },
-      {
-        text: '后台管理 & 录入站',
-        collapsed: true,
-        items: [
-          { text: '员工版 FAQ（整理中）', link: '/admin/' }
-        ]
-      },
-      {
-        text: '关于本站',
-        collapsed: true,
-        items: [
-          { text: '关于与贡献指南', link: '/about' }
         ]
       }
     ],
@@ -135,8 +107,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '辅立码课（智慧教学云）产品知识库',
-      copyright: 'Copyright © 2026 河北习知软件科技有限公司'
+      message: '内容维护：辅立码课-华东POD：付恒',
+      copyright: 'Copyright © 2026 辅立码课WiKi'
     }
   }
 })
