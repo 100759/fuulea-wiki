@@ -42,10 +42,38 @@ docs/
 │   ├── index.md           # 手册总览（含快速入口表）
 │   ├── task-publish.md    # 任务发布
 │   ├── teaching-scenes.md # 教学场景应用
-│   └── advanced.md        # 细化使用
-├── public/images/manual/  # 手册截图
+│   ├── advanced.md        # 细化使用
+│   └── import-scores.md   # 如何导入成绩（含操作录屏）
+├── public/
+│   ├── images/manual/     # 手册截图
+│   └── videos/            # 操作录屏（mp4）
 └── .vitepress/            # 站点配置
 ```
+
+### 放视频
+
+录屏统一放 `docs/public/videos/`，页面里用全局组件 `VideoPlayer`：
+
+```html
+<VideoPlayer
+  src="/videos/xxx.mp4"
+  poster="/images/manual/xxx.png"
+  caption="视频说明"
+/>
+```
+
+`preload="none"`、`playsinline` 已在组件里设好，直接写 src 即可。
+**单个 mp4 不要超过 25 MiB**（Cloudflare Pages 单文件上限）。录屏一般是 60fps 的高分辨率大文件，
+上传前先压一遍，例如：
+
+```bash
+ffmpeg -i 原始.mov -vf "scale=1470:-1,fps=30" \
+  -c:v libx264 -preset medium -crf 30 -pix_fmt yuv420p \
+  -c:a aac -b:a 48k -ac 1 -movflags +faststart \
+  docs/public/videos/xxx.mp4
+```
+
+实测一段 2 分 38 秒、2940×1912@60fps 的原始录屏（154 MB）压完是 5.9 MB。
 
 ## 如何添加新内容
 

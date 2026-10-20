@@ -350,3 +350,8 @@
 ![关联知识图谱](/images/manual/img-p50-02.png)
 
 ![完成关联](/images/manual/img-p50-03.jpg)
+
+::: tip 相关页面
+考试结束后需要把阅卷系统的成绩导进平台，才能在上面这些页面看到数据 —— 操作见
+[如何导入成绩](/teacher/import-scores)（含 2 分 38 秒操作录屏）。
+:::
