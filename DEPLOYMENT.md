@@ -71,13 +71,11 @@ fuulea-wiki/
 ├── DEPLOYMENT.md           # 本文档
 └── docs/                   # VitePress 根目录
     ├── index.md            # 首页（hero + features）
-    ├── teacher/            # 教师端操作手册
-    │   ├── index.md
+    ├── teacher/            # 教师端操作手册（全站唯一内容区）
+    │   ├── index.md            # 手册总览（含快速入口表）
     │   ├── task-publish.md     # 一、任务发布
     │   ├── teaching-scenes.md  # 二、教学场景应用
     │   └── advanced.md         # 三、细化使用
-    ├── student/            # 学生端操作手册（整理中）
-    ├── faq/                # FAQ常见问题（整理中）
     ├── public/             # 静态资源（原样拷贝到站点根）
     │   ├── favicon.svg
     │   └── images/manual/  # 手册截图 99 张

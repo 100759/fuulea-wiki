@@ -3,40 +3,40 @@ layout: home
 
 hero:
   name: 辅立码课WiKi
-  text: 使用手册与 FAQ
-  tagline: 教师端 · 学生端 · 常见问题，一站式产品文档
+  text: 教师端操作手册
+  tagline: 任务发布 · 教学场景应用 · 细化使用 —— 三步找到你要的操作
   actions:
     - theme: brand
-      text: 教师端操作手册
+      text: 进入手册
       link: /teacher/
     - theme: alt
-      text: FAQ常见问题
-      link: /faq/
+      text: 我要找某个功能
+      link: /teacher/#快速入口
 
 features:
-  - icon: 📋
-    title: 教师端操作手册
-    details: 任务发布、教学场景应用、细化使用全流程说明，含 99 张操作截图，覆盖日常教学每一个动作。
-    link: /teacher/
-    linkText: 查看教师端手册
-  - icon: 🎒
-    title: 学生端操作手册
-    details: 学生端 Pad 使用指南——任务接收、在线作答、错题重练、视频解析（内容整理中）。
-    link: /student/
-    linkText: 查看学生端手册
-  - icon: ❓
-    title: FAQ常见问题
-    details: 通用 FAQ、考试系统 FAQ 持续整理中，遇到问题先来这里查。
-    link: /faq/
-    linkText: 查看 FAQ
+  - icon: 📤
+    title: 一、任务发布
+    details: 课程任务、资料任务、答题卡任务、背诵任务、题库选题、选卷、学科网选题，含选题篮与发布设置。
+    link: /teacher/task-publish
+    linkText: 查看任务发布
+  - icon: 🖥️
+    title: 二、教学场景应用
+    details: 大屏讲题、批改阅卷、完成统计、错题反扫 —— 任务发出去之后怎么用。
+    link: /teacher/teaching-scenes
+    linkText: 查看教学场景
+  - icon: 🧭
+    title: 三、细化使用
+    details: 举一反三、催交作业、靶向教学、考试系统、学情诊断、创建课程与知识点关联。
+    link: /teacher/advanced
+    linkText: 查看细化使用
 ---
 
-## 欢迎来到辅立码课WiKi
+## 关于本站
 
-本站是**辅立码课**产品的官方知识库，目前包含三部分：**教师端操作手册**、**学生端操作手册**、**FAQ常见问题**。
+本站是**辅立码课教师端**的操作手册，面向任课教师与班主任，完整覆盖日常教学动作。
 
-内容以《辅立码课教师操作手册》为主体整理而成，学生端手册与 FAQ 持续补充中。
+内容整理自《辅立码课教师操作手册》（北京辅立教育科技研究院，2025 年 6 月），原文操作截图均已内嵌。
 
-::: tip 内容来源
-初始内容整理自《辅立码课教师操作手册》（北京辅立教育科技研究院，2025 年 6 月）及飞书文档《产品使用手册 && FAQ》。
+::: tip 不知道从哪找？
+打开[手册总览](/teacher/)，页面里有一张「**我想…… → 去看**」的快速入口表，按你要做的事直接跳转。
 :::

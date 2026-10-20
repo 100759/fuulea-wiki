@@ -1,6 +1,6 @@
 # fuulea-wiki
 
-**辅立码课WiKi** —— 使用手册与 FAQ，基于 [VitePress](https://vitepress.dev/) 构建，部署于 Cloudflare Pages。
+**辅立码课WiKi** —— 教师端操作手册，基于 [VitePress](https://vitepress.dev/) 构建，部署于 Cloudflare Pages。
 
 🌐 在线访问：<https://fuulea.fuheng.vip>（<https://fuulea-wiki.pages.dev>）
 
@@ -8,9 +8,13 @@
 
 ## 内容
 
-- **教师端操作手册**：任务发布、教学场景应用、细化使用（含全部操作截图）
-- **学生端操作手册**：整理中（来源：飞书《辅立码课学生端 - 使用手册》）
-- **FAQ常见问题**：整理中（来源：飞书《辅立码课FAQ（通用）》《考试系统FAQ》）
+**教师端操作手册**，分三章：
+
+1. 任务发布 —— 课程/资料/答题卡/背诵/题库选题/选卷/学科网选题、选题篮、发布设置
+2. 教学场景应用 —— 大屏讲题、批改阅卷、完成统计、错题反扫
+3. 细化使用 —— 举一反三、催交作业、靶向教学、信息修改、考试系统、学情诊断、创建课程、知识点关联
+
+三章在导航栏一级平铺，方便老师一眼定位；页面右侧「页面目录」可直达章内小节。
 
 ## 本地开发
 
@@ -34,20 +38,22 @@ npm run docs:build    # 构建输出 docs/.vitepress/dist
 ```text
 docs/
 ├── index.md               # 首页
-├── teacher/               # 教师端操作手册
-│   ├── index.md
+├── teacher/               # 教师端操作手册（全站唯一内容区）
+│   ├── index.md           # 手册总览（含快速入口表）
 │   ├── task-publish.md    # 一、任务发布
 │   ├── teaching-scenes.md # 二、教学场景应用
 │   └── advanced.md        # 三、细化使用
-├── student/               # 学生端操作手册（整理中）
-├── faq/                   # FAQ常见问题（整理中）
 ├── public/images/manual/  # 手册截图
 └── .vitepress/            # 站点配置
 ```
 
 ## 如何添加新内容
 
-1. 在 `docs/` 对应目录新建 Markdown 文件，如 `docs/teacher/new-feature.md`
-2. 在 `docs/.vitepress/config.mjs` 的 sidebar 对应分组加一行：
-   `{ text: '页面标题', link: '/teacher/new-feature' }`
+新增一章（推荐，保持导航一级平铺）：
+
+1. 新建 `docs/teacher/xxx.md`，一级标题写成「四、xxx」
+2. 在 `docs/.vitepress/config.mjs` 的 `nav` 和 `sidebar` 里各加一行：
+   `{ text: '四、xxx', link: '/teacher/xxx' }`
 3. 提交推送，Cloudflare Pages 自动部署，1-2 分钟后生效
+
+章内小节直接用 `##` 标题，会自动出现在页面右侧「页面目录」里，无需额外配置。

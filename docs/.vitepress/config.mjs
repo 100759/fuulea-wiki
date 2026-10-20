@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: '辅立码课WiKi',
-  description: '辅立码课使用手册与 FAQ 知识库 —— 教师端、学生端操作手册与常见问题',
+  description: '辅立码课教师端操作手册 —— 任务发布、教学场景应用、细化使用',
   lang: 'zh-CN',
   base: '/',
   cleanUrls: true,
@@ -26,34 +26,22 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '教师端操作手册', link: '/teacher/' },
-      { text: '学生端操作手册', link: '/student/' },
-      { text: 'FAQ常见问题', link: '/faq/' }
+      { text: '手册总览', link: '/teacher/' },
+      { text: '一、任务发布', link: '/teacher/task-publish' },
+      { text: '二、教学场景应用', link: '/teacher/teaching-scenes' },
+      { text: '三、细化使用', link: '/teacher/advanced' }
     ],
 
+    // 全站统一侧边栏：只有教师端手册，四章常驻，方便随时切换
     sidebar: [
       {
         text: '教师端操作手册',
         collapsed: false,
         items: [
-          { text: '总览', link: '/teacher/' },
+          { text: '手册总览', link: '/teacher/' },
           { text: '一、任务发布', link: '/teacher/task-publish' },
           { text: '二、教学场景应用', link: '/teacher/teaching-scenes' },
           { text: '三、细化使用', link: '/teacher/advanced' }
-        ]
-      },
-      {
-        text: '学生端操作手册',
-        collapsed: false,
-        items: [
-          { text: '使用手册（整理中）', link: '/student/' }
-        ]
-      },
-      {
-        text: 'FAQ常见问题',
-        collapsed: false,
-        items: [
-          { text: '常见问题（整理中）', link: '/faq/' }
         ]
       }
     ],
