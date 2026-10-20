@@ -15,17 +15,17 @@ hero:
 
 features:
   - icon: 📤
-    title: 一、任务发布
+    title: 任务发布
     details: 课程任务、资料任务、答题卡任务、背诵任务、题库选题、选卷、学科网选题，含选题篮与发布设置。
     link: /teacher/task-publish
     linkText: 查看任务发布
   - icon: 🖥️
-    title: 二、教学场景应用
+    title: 教学场景应用
     details: 大屏讲题、批改阅卷、完成统计、错题反扫 —— 任务发出去之后怎么用。
     link: /teacher/teaching-scenes
     linkText: 查看教学场景
   - icon: 🧭
-    title: 三、细化使用
+    title: 细化使用
     details: 举一反三、催交作业、靶向教学、考试系统、学情诊断、创建课程与知识点关联。
     link: /teacher/advanced
     linkText: 查看细化使用

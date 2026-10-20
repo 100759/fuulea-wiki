@@ -27,9 +27,9 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '手册总览', link: '/teacher/' },
-      { text: '一、任务发布', link: '/teacher/task-publish' },
-      { text: '二、教学场景应用', link: '/teacher/teaching-scenes' },
-      { text: '三、细化使用', link: '/teacher/advanced' }
+      { text: '任务发布', link: '/teacher/task-publish' },
+      { text: '教学场景应用', link: '/teacher/teaching-scenes' },
+      { text: '细化使用', link: '/teacher/advanced' }
     ],
 
     // 全站统一侧边栏：只有教师端手册，四章常驻，方便随时切换
@@ -39,9 +39,9 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '手册总览', link: '/teacher/' },
-          { text: '一、任务发布', link: '/teacher/task-publish' },
-          { text: '二、教学场景应用', link: '/teacher/teaching-scenes' },
-          { text: '三、细化使用', link: '/teacher/advanced' }
+          { text: '任务发布', link: '/teacher/task-publish' },
+          { text: '教学场景应用', link: '/teacher/teaching-scenes' },
+          { text: '细化使用', link: '/teacher/advanced' }
         ]
       }
     ],

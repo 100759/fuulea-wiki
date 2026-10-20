@@ -40,9 +40,9 @@ docs/
 ├── index.md               # 首页
 ├── teacher/               # 教师端操作手册（全站唯一内容区）
 │   ├── index.md           # 手册总览（含快速入口表）
-│   ├── task-publish.md    # 一、任务发布
-│   ├── teaching-scenes.md # 二、教学场景应用
-│   └── advanced.md        # 三、细化使用
+│   ├── task-publish.md    # 任务发布
+│   ├── teaching-scenes.md # 教学场景应用
+│   └── advanced.md        # 细化使用
 ├── public/images/manual/  # 手册截图
 └── .vitepress/            # 站点配置
 ```
@@ -51,9 +51,11 @@ docs/
 
 新增一章（推荐，保持导航一级平铺）：
 
-1. 新建 `docs/teacher/xxx.md`，一级标题写成「四、xxx」
+1. 新建 `docs/teacher/xxx.md`，一级标题直接写章名（不带「一、二、三」序号，导航栏只放纯章名）
 2. 在 `docs/.vitepress/config.mjs` 的 `nav` 和 `sidebar` 里各加一行：
-   `{ text: '四、xxx', link: '/teacher/xxx' }`
+   `{ text: 'xxx', link: '/teacher/xxx' }`
 3. 提交推送，Cloudflare Pages 自动部署，1-2 分钟后生效
+
+> 导航项超过 6 个时建议改成下拉菜单（`nav` 项里用 `items: [...]` 嵌套），避免顶部挤压。
 
 章内小节直接用 `##` 标题，会自动出现在页面右侧「页面目录」里，无需额外配置。
