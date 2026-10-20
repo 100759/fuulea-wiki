@@ -38,13 +38,13 @@
 | 我想…… | 去看 |
 | --- | --- |
 | 布置一次作业 | [任务发布](/teacher/task-publish) |
-| 制作试卷答题卡 | [答题卡任务](/teacher/task-publish#_1-4-答题卡任务) |
-| 批改学生提交的作业 | [批改阅卷](/teacher/teaching-scenes#_2-2-批改阅卷) |
-| 课堂上讲评错题 | [大屏讲题](/teacher/teaching-scenes#_2-1-大屏讲题) |
-| 组织一次考试并扫卡阅卷 | [考试系统](/teacher/advanced#_3-5-考试系统) |
-| 给薄弱学生推送个性练习 | [靶向教学](/teacher/advanced#_3-3-靶向教学) |
-| 查看班级/个人学情 | [学情诊断](/teacher/advanced#_3-6-学情诊断) |
+| 制作试卷答题卡 | [答题卡任务](/teacher/task-publish#_4-答题卡任务) |
+| 批改学生提交的作业 | [批改阅卷](/teacher/teaching-scenes#_2-批改阅卷) |
+| 课堂上讲评错题 | [大屏讲题](/teacher/teaching-scenes#_1-大屏讲题) |
+| 组织一次考试并扫卡阅卷 | [考试系统](/teacher/advanced#_5-考试系统) |
+| 给薄弱学生推送个性练习 | [靶向教学](/teacher/advanced#_3-靶向教学) |
+| 查看班级/个人学情 | [学情诊断](/teacher/advanced#_6-学情诊断) |
 
 ::: tip 小程序协同
-教师端大部分动作也可以在微信小程序「**辅立教学**」中完成，支持随时随地批改作业、语音讲解留言、学生密码修改等。详见[文字标注](/teacher/teaching-scenes#_2-2-5-文字标注)与[修改学生密码](/teacher/advanced#_3-4-3-修改学生密码)。
+教师端大部分动作也可以在微信小程序「**辅立教学**」中完成，支持随时随地批改作业、语音讲解留言、学生密码修改等。详见[文字标注](/teacher/teaching-scenes#_2-5-文字标注)与[修改学生密码](/teacher/advanced#_4-3-修改学生密码)。
 :::
