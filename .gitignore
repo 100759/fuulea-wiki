@@ -7,3 +7,9 @@ dist
 .vitepress/cache
 .vitepress/dist
 _work/*.png
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.tef_dist/*
+  
