@@ -1,6 +1,0 @@
-/images/manual/*
-  Cache-Control: public, max-age=31556952, immutable
-  X-Cache-Probe: wiki-v2
-
-/videos/*
-  Cache-Control: public, max-age=86400

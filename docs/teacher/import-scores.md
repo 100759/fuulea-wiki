@@ -4,7 +4,7 @@
 
 <VideoPlayer
   src="/videos/import-scores.mp4"
-  poster="/images/manual/img-import-04.png?v=2"
+  poster="/images/manual/img-import-04.png"
   caption="导入成绩完整操作录屏（2 分 38 秒，含解说）"
 />
 
@@ -33,7 +33,7 @@
 
 不管学校用的是哪一家阅卷系统，统一选全通教育。
 
-![导入成绩页面](/images/manual/img-import-04.png?v=2)
+![导入成绩页面](/images/manual/img-import-04.png)
 
 ### 1.4 下载班级对照表
 
