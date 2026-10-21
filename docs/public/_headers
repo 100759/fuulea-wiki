@@ -1,15 +1,6 @@
-# Cloudflare Pages 自定义响应头
-#
-# 背景：Pages 默认给静态资源 max-age=14400（4 小时浏览器缓存）。
-# 而 public/ 下的文件不走 VitePress 的内容哈希，文件名不会变，
-# 导致换图 / 改图后，读者浏览器里仍持续读到本地缓存的旧版本，最多卡 4 小时。
-# 这里把手册截图的缓存压到 1 分钟，换图后约 1 分钟内全员生效。
-
 /images/manual/*
   Cache-Control: public, max-age=60, must-revalidate
+  X-Cache-Probe: wiki-v1
 
-# 操作录屏体积大（约 6 MB）且不常改动，保持较长缓存。
-# 若哪天需要替换某个录屏，请直接改文件名（如 import-scores.mp4 -> import-scores-v2.mp4），
-# 不要覆盖同名文件，否则读者会被旧缓存卡住。
 /videos/*
   Cache-Control: public, max-age=86400
