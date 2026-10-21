@@ -43,6 +43,7 @@ docs/
 │   ├── task-publish.md    # 任务发布
 │   ├── teaching-scenes.md # 教学场景应用
 │   ├── advanced.md        # 细化使用
+│   ├── upload-questions.md # 如何上传试题（含操作录屏）
 │   └── import-scores.md   # 如何导入成绩（含操作录屏）
 ├── public/
 │   ├── images/manual/     # 手册截图

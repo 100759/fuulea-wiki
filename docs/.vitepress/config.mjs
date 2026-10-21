@@ -42,6 +42,7 @@ export default defineConfig({
           { text: '一、任务发布', link: '/teacher/task-publish' },
           { text: '二、教学场景应用', link: '/teacher/teaching-scenes' },
           { text: '三、细化使用', link: '/teacher/advanced' },
+          { text: '如何上传试题', link: '/teacher/upload-questions' },
           { text: '如何导入成绩', link: '/teacher/import-scores' }
         ]
       }

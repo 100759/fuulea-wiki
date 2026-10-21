@@ -44,6 +44,7 @@
 | 组织一次考试并扫卡阅卷 | [考试系统](/teacher/advanced#_5-考试系统) |
 | 给薄弱学生推送个性练习 | [靶向教学](/teacher/advanced#_3-靶向教学) |
 | 查看班级/个人学情 | [学情诊断](/teacher/advanced#_6-学情诊断) |
+| 把一份 PDF / Word 试卷变成可布置的题 | [如何上传试题](/teacher/upload-questions) |
 | 把阅卷系统的成绩导入平台 | [如何导入成绩](/teacher/import-scores) |
 
 ::: tip 小程序协同
