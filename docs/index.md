@@ -29,6 +29,11 @@ features:
     details: 举一反三、催交作业、靶向教学、考试系统、学情诊断、创建课程与知识点关联。
     link: /teacher/advanced
     linkText: 查看细化使用
+  - icon: 🎬
+    title: 公开示范课教程
+    details: 数据化「讲评练」全流程示范，含完整示范课实录、评分标准与 5 天实施流程。
+    link: /teacher/demo-class
+    linkText: 查看示范课教程
 ---
 
 ## 关于本站

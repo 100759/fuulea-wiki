@@ -29,7 +29,8 @@ export default defineConfig({
       { text: '手册总览', link: '/teacher/' },
       { text: '任务发布', link: '/teacher/task-publish' },
       { text: '教学场景应用', link: '/teacher/teaching-scenes' },
-      { text: '细化使用', link: '/teacher/advanced' }
+      { text: '细化使用', link: '/teacher/advanced' },
+      { text: '公开示范课', link: '/teacher/demo-class' }
     ],
 
     // 全站统一侧边栏：只有教师端手册，各章常驻，方便随时切换
@@ -43,7 +44,8 @@ export default defineConfig({
           { text: '二、教学场景应用', link: '/teacher/teaching-scenes' },
           { text: '三、细化使用', link: '/teacher/advanced' },
           { text: '如何上传试题', link: '/teacher/upload-questions' },
-          { text: '如何导入成绩', link: '/teacher/import-scores' }
+          { text: '如何导入成绩', link: '/teacher/import-scores' },
+          { text: '公开示范课教程', link: '/teacher/demo-class' }
         ]
       }
     ],
